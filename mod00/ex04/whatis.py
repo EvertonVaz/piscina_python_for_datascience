@@ -1,5 +1,6 @@
 import sys
 
+
 def what_is():
     if len(sys.argv) < 2:
         return
@@ -11,10 +12,11 @@ def what_is():
         arg = int(sys.argv[1])
 
         if arg % 2 == 0:
-            return(print("I'am Even"))
-        return(print("I'am Odd"))
+            return print("I'am Even")
+        return print("I'am Odd")
 
     except Exception:
         print("AssertionError: argument is not an integer")
+
 
 what_is()

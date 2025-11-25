@@ -11,7 +11,6 @@ source /root/.oh-my-zsh/custom/plugins/zsh-autosuggestions/zsh-autosuggestions.z
 
 alias att='source ~/.zshrc'
 alias config='code $HOME/.zshrc'
-alias pypath='source /product/pypath.sh'
 
 HISTSIZE=10000
 SAVEHIST=10000

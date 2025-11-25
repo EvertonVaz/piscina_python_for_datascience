@@ -28,7 +28,8 @@
 				"ms-python.black-formatter",
 				"kube.42header",
 				"ms-toolsai.jupyter",
-				"ms-toolsai.jupyter-keymap"
+				"ms-toolsai.jupyter-keymap",
+				"tomoki1207.pdf"
 			]
 		}
 	}
