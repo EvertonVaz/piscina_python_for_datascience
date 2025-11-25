@@ -44,6 +44,7 @@ Python 2 was discontinued with version 2.7.18 in 2020.
     assert actual_space_length == expected_space_length
     assert actual_digit_length == expected_digit_length
 
+
 def test_building_empty():
     # arrange
     input = ""
@@ -72,6 +73,7 @@ def test_building_empty():
     assert actual_space_length == expected_space_length
     assert actual_digit_length == expected_digit_length
 
+
 def test_building_assertion_error():
     import sys
     from io import StringIO
@@ -87,6 +89,7 @@ def test_building_assertion_error():
     with redirect_stderr(stderr):
         try:
             from building import main
+
             main()
         except AssertionError as e:
             error_message = str(e)

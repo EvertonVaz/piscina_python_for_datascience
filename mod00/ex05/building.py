@@ -1,5 +1,6 @@
 from sys import argv
 
+
 class Building:
     """
     This class takes a single string argument and calculates the sums of its
@@ -18,6 +19,7 @@ class Building:
 
     def __init__(self, input_string: str):
         self.input_string = input_string
+        self.building()
 
     def building(self):
         """
@@ -39,30 +41,28 @@ class Building:
             elif not char.isalnum():
                 self.punctuation_length += 1
 
+    def __str__(self):
         return (
-            self.length,
-            self.upper_length,
-            self.lower_length,
-            self.punctuation_length,
-            self.digit_length,
-            self.space_length,
+            f"The text contains {self.length} characters:\n"
+            f"{self.upper_length} upper letters\n"
+            f"{self.lower_length} lower letters\n"
+            f"{self.punctuation_length} punctuation marks\n"
+            f"{self.space_length} space\n"
+            f"{self.digit_length} digit"
         )
 
 
 def main():
-    if len(argv) != 2:
+    if len(argv) > 2:
         raise AssertionError("Please provide a single string argument.")
 
-    input_string = argv[1]
-    b = Building(input_string)
-    b.building()
+    if len(argv) == 1:
+        argv.append(" " + input("What is the text to count?\n"))
 
-    print(f"The text contains {b.length} characters:")
-    print(f"{b.upper_length} upper letters")
-    print(f"{b.lower_length} lower letters")
-    print(f"{b.punctuation_length} punctuation marks")
-    print(f"{b.space_length} space")
-    print(f"{b.digit_length} digit")
+    input_string = argv[1]
+
+    print(Building(input_string))
+
 
 if __name__ == "__main__":
     try:
