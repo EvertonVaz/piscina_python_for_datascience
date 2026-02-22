@@ -1,15 +1,3 @@
-# **************************************************************************** #
-#                                                                              #
-#                                                         :::      ::::::::    #
-#    building.py                                        :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: egeraldo <egeraldo@student.42sp.org.br>    +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2025/12/30 14:08:57 by egeraldo          #+#    #+#              #
-#    Updated: 2025/12/30 14:08:58 by egeraldo         ###   ########.fr        #
-#                                                                              #
-# **************************************************************************** #
-
 from sys import argv
 from typing import List
 
@@ -50,7 +38,9 @@ class Building:
             self.lower_length += char.islower()
             self.digit_length += char.isdigit()
             self.space_length += char.isspace()
-            self.punctuation_length += (not char.isalnum() and not char.isspace())
+            self.punctuation_length += (
+                not char.isalnum() and not char.isspace()
+            )
 
     def __str__(self):
         return (
@@ -61,6 +51,7 @@ class Building:
             f"{self.space_length} space\n"
             f"{self.digit_length} digit"
         )
+
 
 def main():
     if len(argv) == 1:
@@ -76,4 +67,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-

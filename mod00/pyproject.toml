@@ -1,11 +1,11 @@
 [project]
-name = "project"
+name = "python-for-datascience"
 version = "0.1.0"
-description = ""
+description = "Pacote com exercícios do módulo 00 para a piscina de python para datascience"
 authors = [
-    {name = "Your Name",email = "you@example.com"}
+    {name = "Everton",email = "egeraldo@student.42sp.org.br"}
 ]
-readme = "README.md"
+
 requires-python = ">=3.10,<4.0"
 dependencies = [
     "taskipy (>=1.14.1,<2.0.0)",
@@ -14,7 +14,7 @@ dependencies = [
 ]
 
 [tool.poetry]
-packages = [{include = "project", from = "src"}]
+packages = [{include = "ex09", from = "."}]
 
 
 [build-system]
@@ -22,11 +22,16 @@ requires = ["poetry-core>=2.0.0,<3.0.0"]
 build-backend = "poetry.core.masonry.api"
 
 
+[tool.black]
+line-length = 79
+
+
 [tool.taskipy.tasks]
 run = "poetry run "
-lint = "black . && flake8 ."
+lint = "black . && flake8"
 
 [dependency-groups]
 dev = [
     "black (>=25.11.0,<26.0.0)"
 ]
+

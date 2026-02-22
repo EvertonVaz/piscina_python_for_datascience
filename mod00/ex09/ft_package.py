@@ -1,5 +1,3 @@
-
-
 def count_in_list(lst, value) -> int:
     """Conta quantas vezes um valor aparece em uma lista.
 

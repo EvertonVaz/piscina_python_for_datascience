@@ -22,6 +22,7 @@ def ft_tqdm(lst: range) -> Iterator[int]:
 
     print(f"[{elapsed_str}<00:00, {it_per_sec:.2f}it/s]", end="\n")
 
+
 if __name__ == "__main__":
     for i in ft_tqdm(list(range(333))):
         sleep(0.005)
