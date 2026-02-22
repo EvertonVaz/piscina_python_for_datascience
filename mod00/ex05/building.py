@@ -1,3 +1,15 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    building.py                                        :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: egeraldo <egeraldo@student.42sp.org.br>    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2025/12/30 14:08:57 by egeraldo          #+#    #+#              #
+#    Updated: 2025/12/30 14:08:58 by egeraldo         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 from sys import argv
 from typing import List
 
@@ -50,16 +62,18 @@ class Building:
             f"{self.digit_length} digit"
         )
 
-
 def main():
     if len(argv) == 1:
-        argv.append(" " + input("What is the text to count?\n"))
+        try:
+            argv.append(" " + input("What is the text to count?\n"))
+        except EOFError:
+            argv.append("")
+        except AssertionError as e:
+            print(f"AssertionError: {e}")
 
     print(Building(argv))
 
 
 if __name__ == "__main__":
-    try:
-        main()
-    except AssertionError as e:
-        print(f"AssertionError: {e}")
+    main()
+
