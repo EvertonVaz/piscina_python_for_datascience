@@ -1,41 +1,43 @@
-# ft_package
+# How to Build and Install `ft_package`
 
-Pacote Python criado para o exercício 09 do módulo 00 da Piscina Python for Data Science.
+1. **Build the package**
 
-## Descrição
-O `ft_package` contém funções utilitárias desenvolvidas como parte do aprendizado de criação de pacotes Python. Atualmente, inclui a função `count_in_list`.
+    Inside the `ft_package` folder, run:
 
-## Estrutura
-```
-ft_package/
-	__init__.py
-	count_in_list.py
-```
+    ```bash
+    python -m build
+    ```
 
-## Instalação
-Para instalar o pacote localmente, execute:
+    This command uses the `pyproject.toml` file to instruct Python how to build the package. The build artifacts will be created in the `dist/` directory.
 
-```bash
-cd ex09
-pip install build
-python setup.py sdist
-python -m build
-pip install ./dist/ft_package-0.0.1-py3-none-any.whl
-```
+2. **Install the package**
 
-## Uso
-Exemplo de uso da função `count_in_list`:
+    To install the package using `pip`, run one of the following commands:
 
-```python
-from ft_package.count_in_list import count_in_list
+    ```bash
+    pip install ./dist/ft_package-0.0.1.tar.gz
+    ```
 
-lista = [1, 2, 2, 3, 2, 4]
-resultado = count_in_list(lista, 2)
-print(resultado)  # Saída: 3
-```
+    or
 
-## Autor
-Everton Vaz
+    ```bash
+    pip install ./dist/ft_package-0.0.1-py3-none-any.whl
+    ```
 
-## Licença
-Veja o arquivo LICENSE para mais informações.
+3. **Test the package**
+
+    After installation, you can test the package by running:
+
+    ```bash
+    python3 ../tester.py
+    ```
+
+4. **Uninstall the package**
+
+    If you need to remove the package, use:
+
+    ```bash
+    pip uninstall ft_package
+    ```
+
+    This will uninstall `ft_package` from your Python environment.
