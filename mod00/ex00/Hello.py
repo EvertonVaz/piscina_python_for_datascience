@@ -11,31 +11,6 @@ ft_set.update({"Hello", "São Paulo!"})
 ft_dict["Hello"] = "42sp"
 
 
-def tests():
-    try:
-        assert ft_list == [
-            "Hello",
-            "World!",
-        ], f"Expected ['Hello', 'World!'], got {ft_list}"
-        assert ft_tuple == (
-            "Hello",
-            "Brasil",
-        ), f"Expected ('Hello', 'Brasil'), got {ft_tuple}"
-        assert ft_set == {
-            "Hello",
-            "São Paulo!",
-        }, f"Expected {{'Hello', 'São Paulo!'}}, got {ft_set}"
-        assert ft_dict == {
-            "Hello": "42sp"
-        }, f"Expected {{'Hello': '42sp'}}, got {ft_dict}"
-        print("\033[32mTests passed successfully!\033[0m\n")
-    except AssertionError as e:
-        print("Error: Test failed", e)
-        return e
-
-
-tests()
-
 print(ft_list)
 print(ft_tuple)
 print(ft_set)

@@ -166,31 +166,6 @@ wheels = [
 ]
 
 [[package]]
-name = "project"
-version = "0.1.0"
-source = { editable = "." }
-dependencies = [
-    { name = "flake8" },
-    { name = "pytest" },
-    { name = "taskipy" },
-]
-
-[package.dev-dependencies]
-dev = [
-    { name = "black" },
-]
-
-[package.metadata]
-requires-dist = [
-    { name = "flake8", specifier = ">=7.3.0,<8.0.0" },
-    { name = "pytest", specifier = ">=9.0.1,<10.0.0" },
-    { name = "taskipy", specifier = ">=1.14.1,<2.0.0" },
-]
-
-[package.metadata.requires-dev]
-dev = [{ name = "black", specifier = ">=25.11.0,<26.0.0" }]
-
-[[package]]
 name = "psutil"
 version = "6.1.1"
 source = { registry = "https://pypi.org/simple" }
@@ -249,6 +224,31 @@ sdist = { url = "https://files.pythonhosted.org/packages/d1/db/7ef3487e0fb0049dd
 wheels = [
     { url = "https://files.pythonhosted.org/packages/3b/ab/b3226f0bd7cdcf710fbede2b3548584366da3b19b5021e74f5bde2a8fa3f/pytest-9.0.2-py3-none-any.whl", hash = "sha256:711ffd45bf766d5264d487b917733b453d917afd2b0ad65223959f59089f875b", size = 374801, upload-time = "2025-12-06T21:30:49.154Z" },
 ]
+
+[[package]]
+name = "python-for-datascience"
+version = "0.1.0"
+source = { editable = "." }
+dependencies = [
+    { name = "flake8" },
+    { name = "pytest" },
+    { name = "taskipy" },
+]
+
+[package.dev-dependencies]
+dev = [
+    { name = "black" },
+]
+
+[package.metadata]
+requires-dist = [
+    { name = "flake8", specifier = ">=7.3.0,<8.0.0" },
+    { name = "pytest", specifier = ">=9.0.1,<10.0.0" },
+    { name = "taskipy", specifier = ">=1.14.1,<2.0.0" },
+]
+
+[package.metadata.requires-dev]
+dev = [{ name = "black", specifier = ">=25.11.0,<26.0.0" }]
 
 [[package]]
 name = "pytokens"

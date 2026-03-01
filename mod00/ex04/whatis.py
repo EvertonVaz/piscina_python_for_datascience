@@ -19,4 +19,5 @@ def what_is():
         print("AssertionError: argument is not an integer")
 
 
-what_is()
+if __name__ == "__main__":
+    what_is()
