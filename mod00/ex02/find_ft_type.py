@@ -15,7 +15,7 @@ if __name__ == "__main__":
     ft_list = ["Hello", "tata!"]
     ft_tuple = ("Hello", "toto!")
     ft_set = {"Hello", "tutu!"}
-    ft_dict = {"Hello" : "titi!"}
+    ft_dict = {"Hello": "titi!"}
     all_thing_is_obj(ft_list)
     all_thing_is_obj(ft_tuple)
     all_thing_is_obj(ft_set)
